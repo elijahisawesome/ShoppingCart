@@ -1,24 +1,35 @@
-import logo from './logo.svg';
 import './App.css';
+import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
+import Cart from './Cart.js';
+import Products from './Products.js';
+import Home from './Home.js';
+import Nav from './NavBar';
+import {useState} from 'react'
+
 
 function App() {
+  const [productsInCart, setProductsInCart] = useState({});
+  const [totalProducts, setTotalProducts] = useState(0);
+
+  const addOrRemoveProduct = function(newProduct, val){
+    if(val>0 && !!productsInCart[newProduct.id]){
+      setProductsInCart({...productsInCart, [newProduct.id]:{count:productsInCart[newProduct.id].count+val,product:newProduct}});
+    }
+    else if(!productsInCart[newProduct.id]){
+      setProductsInCart({...productsInCart,[newProduct.id]:{count:1,product:newProduct}})
+    }
+    setTotalProducts(totalProducts+val)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <Nav totalProducts={totalProducts}/>
+      <Switch> 
+        <Route exact path = '/' component={Home}></Route>
+        <Route path = '/Checkout'><Cart addOrRemoveProduct={addOrRemoveProduct} productsInCart={productsInCart}/></Route>
+        <Route path = '/Products'> <Products addOrRemoveProduct={addOrRemoveProduct}/></Route>
+      </Switch>
+    </Router>
   );
 }
 

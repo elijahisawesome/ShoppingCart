@@ -1,0 +1,22 @@
+#NavBar{
+    background-color:rgb(9, 9, 73);
+    display: flex;
+    text-decoration: underline;
+    justify-content: space-around;
+    list-style-type: none;
+    align-items: center;
+    height: 10vh;
+    object-fit:contain;
+    position: sticky;
+    width: 100%;
+}
+.navItem{
+    color:whitesmoke;
+}
+.NavLogo{
+    height:100%;
+}
+.NavLogoWrapper{
+    object-fit:contain;
+    height:100%;
+}
