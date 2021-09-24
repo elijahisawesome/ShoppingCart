@@ -15,6 +15,14 @@ function App() {
     if(val>0 && !!productsInCart[newProduct.id]){
       setProductsInCart({...productsInCart, [newProduct.id]:{count:productsInCart[newProduct.id].count+val,product:newProduct}});
     }
+    else if(val <0 && productsInCart[newProduct.id].count>1){
+      setProductsInCart({...productsInCart, [newProduct.id]:{count:productsInCart[newProduct.id].count+val,product:newProduct}});
+    }
+    else if(val<0 && productsInCart[newProduct.id].count == 1){
+      let newCart = productsInCart;
+      delete newCart[newProduct.id];
+      setProductsInCart(newCart);
+    }
     else if(!productsInCart[newProduct.id]){
       setProductsInCart({...productsInCart,[newProduct.id]:{count:1,product:newProduct}})
     }
