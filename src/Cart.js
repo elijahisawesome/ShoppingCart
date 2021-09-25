@@ -1,5 +1,10 @@
+import './styles/Cart.css';
+
+
 export default function CartPage(props){
+    
     let productArray = [];
+    let totalPrice=0.00;
 
     function allProducts(){
         for(const product in props.productsInCart){
@@ -15,6 +20,11 @@ export default function CartPage(props){
         return false;
     }
 
+    
+    function tabulatePrice(product){
+        totalPrice+= parseFloat(product);
+    }
+
     allProducts();
 
     if (checkIfArrayEmpty(productArray)){
@@ -22,20 +32,59 @@ export default function CartPage(props){
     }
 
     return(
-        <div>
-            Cart Page!
-            {productArray.map((product)=>{
-                return(<div>{product.product.name}, {product.count} 
-                <button onClick={()=>props.addOrRemoveProduct(product.product,-1)}>remove</button>
-                <button onClick={()=>props.addOrRemoveProduct({id:product.product.id, name:product.product.name},1)}>Add</button>
-                </div>)
-            })}
+
+        <div id="Cart">
+        <link rel="preconnect" href="https://fonts.googleapis.com"/>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
+            <div className='cartBuffer'>Shopping Cart</div>
+            <div className='cartItems'>
+                {productArray.map((product)=>{
+                    tabulatePrice(product.product.price * product.count)
+                    return(<div className='cartItem'>
+                    <div className='cartUpper'>
+                        <p>
+                            {product.product.name}
+                        </p>
+                        <p> 
+                            ${product.product.price}
+                        </p>
+                        <div className='cartCounts'>
+                            <button className="cartButton" onClick={()=>props.addOrRemoveProduct(product.product,-1)}>-</button>
+                            {product.count}
+                            <button className="cartButton" onClick={()=>props.incrementProduct({id:product.product.id},1)}>+</button>
+                        </div>
+                        </div>
+                            <div className='cartImageContainer'>
+                                <img className='cartImage' src={product.product.img}/> 
+                            </div>
+
+                    
+
+                    </div>)
+                })}
+            </div>
+            <div className='cartBuffer'></div>
+            <div id='checkoutButtonContainer'>
+                <button className='checkoutButton' onClick={()=>{alert('Check out!')}}>
+                    Checkout
+                </button>
+            </div>
+            <div>Order Total: ${totalPrice.toFixed(2)}</div>
+            <div id='CartPageCover' onClick={()=>{cartToggle()}}></div>
         </div>
     )
 }
 
 function DefaultCartPage(){
     return(
-        <div>Cart is empty!</div>
+        <div id="Cart">Cart is empty!
+            <div id='CartPageCover' onClick={()=>{cartToggle()}}></div>
+        </div>
     )
+}
+
+function cartToggle(){
+    const cart = document.getElementById('Cart');
+    cart.classList.remove("checkingOut");
 }

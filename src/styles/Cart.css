@@ -1,0 +1,91 @@
+#Cart{
+    display:none;
+    z-index:999;
+    
+}
+#Cart.checkingOut{
+    display:flex;
+    flex-direction: column;
+    position:fixed;
+    left:70%;
+    width:30%;
+    height:100%;
+    top:0%;
+    background:white;
+    align-items:center;
+
+}
+#CartPageCover{
+    background:rgba(0, 0, 255, 0.144);
+    width:1000%;
+    height:1000%;
+    top:-40%;
+    position:absolute;
+    right:100%;
+    z-index:0;
+}
+.cartImage{
+    height:100%;
+    width:100%;
+}
+.cartImageContainer{
+    height:100px;
+    width:100px;
+    margin-left:auto;
+    margin-right:5%;
+}
+.cartButton{
+    background:transparent;
+    border:none;
+    cursor:pointer;
+}
+.cartCounts{
+    width:100px;
+    align-items:center;
+}
+.cartItem{
+    font-size:15px;
+    width:100%;
+    display:flex;
+    border-bottom-style:solid;
+    border-color:rgb(167, 167, 167);
+    border-width:1px;
+    padding-bottom: 15px;
+    margin-bottom:15px;
+}
+.cartBuffer{
+    height:10%;
+    width:100%;
+    text-align:center;
+    font-weight: 100;
+    font-size:50px;
+    font-family: 'Bebas Neue', cursive;
+}
+.cartUpper{
+    display:flex;
+    flex-direction: column;
+}
+.cartItems{
+    overflow-y:auto;
+    overflow-x:hidden;
+    width:100%;
+}
+.checkoutButton{
+    width:100%;
+    height:100%;
+    color:gainsboro;
+    background:black;
+    cursor:pointer;
+    font-family: 'Bebas Neue', cursive;
+    font-size:25px;
+}
+.checkoutButton:hover{
+    background:rgb(75, 75, 75)
+}
+#checkoutButtonContainer{
+    width:100%;
+    height:5%;
+}
+p{
+    height: 10px;
+}

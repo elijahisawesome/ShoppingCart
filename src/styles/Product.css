@@ -1,0 +1,18 @@
+.productImage{
+    height:100%;
+    width:100%;
+}
+.productImageContainer{
+    height:100px;
+    width:100px;
+    margin-right:5%;
+}
+#products{
+    display:flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    flex-wrap:wrap;
+}
+.product{
+    flex: 1 0 21%;
+}

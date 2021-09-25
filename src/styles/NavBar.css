@@ -12,6 +12,10 @@
 }
 .navItem{
     color:whitesmoke;
+    background-color:transparent;
+    border:none;
+    cursor:pointer;
+    font-size:15px;
 }
 .NavLogo{
     height:100%;

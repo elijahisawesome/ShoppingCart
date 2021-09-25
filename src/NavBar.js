@@ -15,9 +15,13 @@ export default function NavBar(props){
             <Link to ='/'>
                 <li className="navItem">Home</li>
             </Link>
-            <Link to ='/Checkout'>
-                <li className="navItem">Checkout image {props.totalProducts}</li>
-            </Link>
+            <button className="navItem" onClick={(e)=>{toggleShop(e)}}>Checkout image {props.totalProducts}</button>
         </nav>
     )
+}
+
+function toggleShop(event){
+    event.stopPropagation();
+    const Cart = document.getElementById('Cart');
+    Cart.classList.toggle('checkingOut');
 }
