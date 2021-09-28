@@ -6,16 +6,17 @@ import './styles/NavBar.css';
 export default function NavBar(props){
     return(
         <nav id = 'NavBar'>
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
             <h3 className = 'NavLogoWrapper'>
-                <img className = 'NavLogo'src={logo} alt='wat'/>
+                <img className = 'NavLogo'src={logo} alt=''/>
             </h3>
-            <Link to ='/Products'>
-                <li className="navItem">Products</li>
+            <Link to ='/Contact'>
+                <li className="navItem">Contact</li>
             </Link>
             <Link to ='/'>
                 <li className="navItem">Home</li>
             </Link>
-            <button className="navItem" onClick={(e)=>{toggleShop(e)}}>Checkout image {props.totalProducts}</button>
+            <button className="navItem" onClick={(e)=>{toggleShop(e)}}><i class="fa fa-shopping-cart"></i> {props.totalProducts}</button>
         </nav>
     )
 }

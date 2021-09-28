@@ -11,8 +11,8 @@
     width: 100%;
 }
 .navItem{
-    color:whitesmoke;
     background-color:transparent;
+    color:whitesmoke;
     border:none;
     cursor:pointer;
     font-size:15px;
@@ -23,4 +23,8 @@
 .NavLogoWrapper{
     object-fit:contain;
     height:100%;
+}
+a{
+    text-decoration:none;
+    color:black;
 }

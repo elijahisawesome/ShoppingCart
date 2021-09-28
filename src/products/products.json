@@ -4,31 +4,31 @@
             "id":0,
             "name":"peach",
             "price":"3.20",
-            "img":"./images/Peach-Free-Download-PNG.png"
+            "img":"../images/Peach-Free-Download-PNG.png"
         },
         {
             "id":1,
             "name":"apple",
             "price":"2.62",
-            "img":"./images/apple.png"
+            "img":"../images/apple.png"
         },
         {
             "id":2,
             "name":"small toy",
             "price":"6.00",
-            "img":"./images/watergun.jpeg"
+            "img":"../images/watergun.jpeg"
         },
         {
             "id":3,
             "name":"big toy",
             "price":"24.99",
-            "img":"./images/train.jpg"
+            "img":"../images/train.jpg"
         },
         {
             "id":4,
             "name":"video game",
             "price":"60.00",
-            "img":"./images/game.webp"
+            "img":"../images/game.webp"
         }
     ]
 }

@@ -2,15 +2,21 @@ import './App.css';
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom';
 import Cart from './Cart.js';
 import Products from './Products.js';
+import Contact from './Contact.js';
 import Home from './Home.js';
 import Nav from './NavBar';
 import {useState} from 'react'
+import subPages from './subPages/subPages.js';
 
 
 function App() {
   const [productsInCart, setProductsInCart] = useState({});
   const [totalProducts, setTotalProducts] = useState(0);
+  const [subPage, setSubPage] = useState('')
 
+  const updatePage = function(val){
+    setSubPage(val);
+  }
   const addOrRemoveProduct = function(newProduct, val){
 
 
@@ -49,9 +55,15 @@ function App() {
   return (
     <Router>
       <Nav totalProducts={totalProducts}/>
+      <Products addOrRemoveProduct={addOrRemoveProduct} page={subPage}/>
       <Switch> 
         <Route exact path = '/' component={Home}></Route>
-        <Route path = '/Products'> <Products addOrRemoveProduct={addOrRemoveProduct}/></Route>
+        <Route exact path ='/Contact'><Contact/></Route>
+        {subPages.map((Page)=>{
+          return(
+            <Route exact path ={`/Products/${Page.name}`}><Page addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/></Route>
+          )
+        })}
       </Switch>
       <Cart addOrRemoveProduct={addOrRemoveProduct} productsInCart={productsInCart} incrementProduct={incrementProduct}/>
     </Router>
