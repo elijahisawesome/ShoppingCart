@@ -1,34 +1,68 @@
 {
-    "Products":[
-        {
-            "id":0,
-            "name":"peach",
-            "price":"3.20",
-            "img":"../images/Peach-Free-Download-PNG.png"
-        },
-        {
-            "id":1,
-            "name":"apple",
-            "price":"2.62",
-            "img":"../images/apple.png"
-        },
-        {
-            "id":2,
-            "name":"small toy",
-            "price":"6.00",
-            "img":"../images/watergun.jpeg"
-        },
-        {
-            "id":3,
-            "name":"big toy",
-            "price":"24.99",
-            "img":"../images/train.jpg"
-        },
-        {
-            "id":4,
-            "name":"video game",
-            "price":"60.00",
-            "img":"../images/game.webp"
-        }
-    ]
+
+    "Clothes":{
+        "Not Clothes":[
+            {
+                "id":2,
+                "name":"small toy",
+                "price":"6.00",
+                "img":"../images/watergun.jpeg"
+            },
+            {
+                "id":3,
+                "name":"big toy",
+                "price":"24.99",
+                "img":"../images/train.jpg"
+            }
+        ]
+    }
+    ,
+    "Electronics":{
+    "Video Games":[
+            {
+                "id":4,
+                "name":"Dark Souls",
+                "price":"60.00",
+                "img":"../images/game.webp"
+            }
+        ]
+    },
+    "Groceries":{
+        "Fish":[
+            {
+                "id":6,
+                "name":"green fish",
+                "price":"29.50",
+                "img":"../images/fish1.webp"
+            }
+        ],
+        "Meat":[
+            {
+                "id":7,
+                "name":"steak",
+                "price":"13.99",
+                "img":"../images/new-york-strip.jpg"
+            }
+        ],
+        "Fruit":[
+            {
+                "id":0,
+                "name":"peach",
+                "price":"3.20",
+                "img":"../images/Peach-Free-Download-PNG.png"
+            },
+            {
+                "id":1,
+                "name":"apple",
+                "price":"2.62",
+                "img":"../images/apple.png"
+            },
+            {
+                "id":5,
+                "name":"banana",
+                "price":".68",
+                "img":"../images/banana.jpg"
+            }
+        ]
+    }
 }

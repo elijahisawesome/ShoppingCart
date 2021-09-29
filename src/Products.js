@@ -2,7 +2,8 @@ import * as data from './products/products.json';
 import './styles/Product.css';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react'
-import subPages from './subPages/subPages.js';
+import subPages,{subPagesNames} from './subPages/subPages.js';
+import SideBar from './SideBar.js';
 const products = data.default.Products;
 
 
@@ -18,15 +19,13 @@ export default function ProductsPage(props){
 
     return(
         <div>
-            <div id='sideBar' >
-                {sideBarData}
-            </div>
+            <SideBar page={props.page}/>
             <nav id='productsHeader'>
-                {subPages.map(page=>{
+                {subPagesNames.map(page=>{
                     return(
-                     <Link to={`/Products/${page.name}`}>
+                     <Link to={`/Products/${page}`}>
                      <div className='productBlockHeader'>
-                        {page.name}
+                        {page}
                          <div className = 'productBlock'>
                              <LoremGen/>
                          </div>

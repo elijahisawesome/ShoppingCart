@@ -6,7 +6,7 @@ import Contact from './Contact.js';
 import Home from './Home.js';
 import Nav from './NavBar';
 import {useState} from 'react'
-import subPages from './subPages/subPages.js';
+import subPages,{subPagesNames} from './subPages/subPages.js';
 
 
 function App() {
@@ -59,9 +59,10 @@ function App() {
       <Switch> 
         <Route exact path = '/' component={Home}></Route>
         <Route exact path ='/Contact'><Contact/></Route>
-        {subPages.map((Page)=>{
+        {subPagesNames.map((page, index)=>{
+          const Page=subPages[index];
           return(
-            <Route exact path ={`/Products/${Page.name}`}><Page addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/></Route>
+            <Route exact path ={`/Products/${page}`}><Page addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/></Route>
           )
         })}
       </Switch>
