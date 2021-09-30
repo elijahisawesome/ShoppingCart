@@ -37,12 +37,13 @@
     position:absolute;
     left:0%;
     right:0%;
+    justify-content:space-evenly;
 }
 .productBlockHeader{
     font-size:18px;
     font-weight:500;
 }
-.productBlockHeader:hover .productBlock{display:block;}
+.productBlockHeader:hover .productBlock{display:flex;}
 
 #productBlockHeaderContainer{
     display:flex;
@@ -66,4 +67,11 @@
     display:flex;
     align-items: center;
     justify-content: center;
+}
+.productBlockTitle{
+    justify-content: space-evenly;
+    font-size:20px;
+}
+.productBlockSubTitle{
+    font-size:15px;
 }

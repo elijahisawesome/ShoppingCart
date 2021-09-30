@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react'
 import subPages,{subPagesNames} from './subPages/subPages.js';
 import SideBar from './SideBar.js';
-const products = data.default.Products;
+const products = data.default;
 
 
 export default function ProductsPage(props){
@@ -16,7 +16,6 @@ export default function ProductsPage(props){
     useEffect(()=>{
         updateSideBar(props.page);
     })
-
     return(
         <div>
             <SideBar page={props.page}/>
@@ -26,9 +25,7 @@ export default function ProductsPage(props){
                      <Link to={`/Products/${page}`}>
                      <div className='productBlockHeader'>
                         {page}
-                         <div className = 'productBlock'>
-                             <LoremGen/>
-                         </div>
+                        <ProductBlock block={products[page]} page={page}/>
                      </div>
                     </Link>)
                 })}
@@ -41,14 +38,36 @@ export default function ProductsPage(props){
 
 
 }
-function LoremGen(){
+
+function ProductBlock(props){
     return(
-    <div className = 'productSubmenu'>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    )
+    <div className = 'productBlock'>
+        {Object.keys(props.block).map((category)=>{
+            return(
+                <Link to={`/Products/${props.page}/${category}`}>
+                    <div className='productBlockTitle'>
+                        {category}
+                        {props.block[category].map(product=>{
+                            return(
+                                <div className='productBlockSubTitle'>
+                                    {product.name}
+                                </div>
+                            )
+                        })}
+                    </div>
+                </Link>
+            )
+        })}
+    </div>)
 }
 
+function objectIterator(obj){
+    let newArray=[];
+    for(const val in obj){
+        newArray.push(obj[val]);
+    }
+    return newArray;
+}
 /*
             <div id="products">
                 {products.map((product)=>{
