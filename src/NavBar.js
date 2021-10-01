@@ -16,7 +16,7 @@ export default function NavBar(props){
             <Link to ='/'>
                 <li className="navItem">Home</li>
             </Link>
-            <button className="navItem" onClick={(e)=>{toggleShop(e)}}><i class="fa fa-shopping-cart"></i> {props.totalProducts}</button>
+            <button className="navItem" onClick={(e)=>{toggleShop(e)}}><i className="fa fa-shopping-cart"></i> {props.totalProducts}</button>
         </nav>
     )
 }

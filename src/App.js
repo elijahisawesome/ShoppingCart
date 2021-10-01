@@ -12,7 +12,7 @@ import PageGenerator,{products as pagesProducts} from './subPages/subPages.js';
 function App() {
   const [productsInCart, setProductsInCart] = useState({});
   const [totalProducts, setTotalProducts] = useState(0);
-  const [subPage, setSubPage] = useState('')
+  const [subPage, setSubPage] = useState('');
 
   const updatePage = function(val){
     setSubPage(val);
@@ -61,8 +61,8 @@ function App() {
         <Route exact path ='/Contact'><Contact/></Route>
         {Object.entries(pagesProducts).map((category, index)=>{
           return(
-            <Route exact path={`/Products/${category[0]}`}>
-              <PageGenerator isSubMenu={false} sideBar={category[1]} title={category[0]} productArray={category[1]} addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/>
+            <Route exact path={`/Products/${category[0]}`} key={index}>
+              <PageGenerator isSubMenu={false} sideBar={category} title={category[0]} productArray={category[1]} addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/>
             </Route>
           )
         })}
@@ -79,8 +79,8 @@ const CategoryRouting = (props)=>{
     return(
       Object.entries(category[1]).map((subProduct, subIndex)=>{
         return(
-          <Route exact path={`/Products/${category[0]}/${subProduct[0]}`}>
-            <PageGenerator isSubMenu={true} sideBar={category[1]} title={subProduct[0]} productArray={subProduct[1]} addOrRemoveProduct={props.addOrRemoveProduct} setPage={props.updatePage}/>
+          <Route exact path={`/Products/${category[0]}/${subProduct[0]}`} key={subIndex}>
+            <PageGenerator isSubMenu={true} sideBar={category} title={subProduct[0]} productArray={subProduct[1]} addOrRemoveProduct={props.addOrRemoveProduct} setPage={props.updatePage}/>
           </Route>
         )
       })

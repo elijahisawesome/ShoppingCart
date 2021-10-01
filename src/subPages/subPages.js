@@ -6,20 +6,20 @@ const subPagesNames = ['Groceries','Clothes','Electronics']
 
 function PageGenerator(props){
     useEffect(()=>{
+        props.setPage(props.sideBar);
         return()=>{props.setPage('')}
     },[])
-    props.setPage(props.sideBar);
 
     if(props.isSubMenu){
         return(
-            <div>
+            <div key={Math.random()}>
                 <div id = 'productsHeader'>
                     {props.title}
                 </div>
                 <div id='products'>
-                    {props.productArray.map((product)=>{
+                    {props.productArray.map((product, index)=>{
                         return(
-                            <div className ='product'>
+                            <div className ='product' key={index}>
                             {product.name}
                             <div className='productImageContainer'>
                                 <img className ='productImage'src={`../${product.img}`}/>
@@ -34,15 +34,15 @@ function PageGenerator(props){
     }
     else{
         return(
-            <div>
+            <div key={Math.random()}>
                 <div id = 'productsHeader'>
                     {props.title}
                 </div>
                 <div id='products'>
                     {Object.entries(props.productArray).map((category,index)=>{
-                        return category[1].map((product) =>{
+                        return category[1].map((product, index) =>{
                             return(
-                                <div className ='product'>
+                                <div className ='product' key={index}>
                                 {product.name}
                                 <div className='productImageContainer'>
                                     <img className ='productImage'src={`../${product.img}`}/>
