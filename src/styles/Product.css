@@ -1,6 +1,7 @@
 .productImage{
-    height:100%;
-    width:100%;
+    max-height:100%;
+    max-width:100%;
+    object-fit:cover;
 }
 .productImageContainer{
     height:100px;
@@ -44,6 +45,9 @@
     font-weight:500;
 }
 .productBlockHeader:hover .productBlock{display:flex;}
+.productBlock:focus{
+    display:none;
+}
 
 #productBlockHeaderContainer{
     display:flex;
@@ -74,24 +78,4 @@
 }
 .productBlockSubTitle{
     font-size:15px;
-}
-.sideBarCategory{
-    display:flex;
-    flex-direction:column;
-    width:100%;
-    justify-content:flex-end;
-    padding:0 0 15px 0;
-    overflow:hidden;
-    font-size: 20px;
-    font-weight: 600;
-}
-.sideBarCategory:hover{
-    color:red;
-    cursor:pointer;
-}
-.sideBarProduct{
-    padding-top: 5px;
-    color:black;
-    font-size: 15px;
-    font-weight:400;
 }

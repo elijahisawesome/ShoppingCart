@@ -25,6 +25,7 @@
                 "price":"60.00",
                 "img":"../images/game.webp"
             }
+
         ]
     },
     "Groceries":{
@@ -62,6 +63,14 @@
                 "name":"banana",
                 "price":".68",
                 "img":"../images/banana.jpg"
+            }
+        ],
+        "Canned Goods":[
+            {
+                "id":8,
+                "name":"canned  tomato",
+                "price": ".98",
+                "img":"../images/canned-tomato.png"
             }
         ]
     }

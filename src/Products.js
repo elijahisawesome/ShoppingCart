@@ -9,14 +9,6 @@ const MAX_URL_LENGTH = 42;
 
 
 export default function ProductsPage(props){
-    /*const [sideBarData,setSideBarData] = useState({});
-
-    const updateSideBar = function(val){
-        setSideBarData(val);
-    }
-    useEffect(()=>{
-        updateSideBar(props.page);
-    })*/
 
     return(
         <div>
@@ -61,7 +53,7 @@ function ProductBlock(props){
     <div className = 'productBlock'>
         {Object.keys(props.block).map((category, index)=>{
             return(
-                <Link to={`/Products/${props.page[0]}/${category}`} key={index}>
+                <Link to={`/Products/${props.page}/${category}`} key={index}>
                     <div className='productBlockTitle'>
                         {category}
                         {props.block[category].map(product=>{
