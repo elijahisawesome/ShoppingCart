@@ -1,0 +1,21 @@
+{
+  "files": {
+    "main.css": "/ShoppingCart/static/css/main.6210e76c.chunk.css",
+    "main.js": "/ShoppingCart/static/js/main.1baab7e9.chunk.js",
+    "main.js.map": "/ShoppingCart/static/js/main.1baab7e9.chunk.js.map",
+    "runtime-main.js": "/ShoppingCart/static/js/runtime-main.dcd2172a.js",
+    "runtime-main.js.map": "/ShoppingCart/static/js/runtime-main.dcd2172a.js.map",
+    "static/js/2.60acd37f.chunk.js": "/ShoppingCart/static/js/2.60acd37f.chunk.js",
+    "static/js/2.60acd37f.chunk.js.map": "/ShoppingCart/static/js/2.60acd37f.chunk.js.map",
+    "index.html": "/ShoppingCart/index.html",
+    "static/css/main.6210e76c.chunk.css.map": "/ShoppingCart/static/css/main.6210e76c.chunk.css.map",
+    "static/js/2.60acd37f.chunk.js.LICENSE.txt": "/ShoppingCart/static/js/2.60acd37f.chunk.js.LICENSE.txt",
+    "static/media/Cheeseburger.81fdb64b.jpg": "/ShoppingCart/static/media/Cheeseburger.81fdb64b.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.dcd2172a.js",
+    "static/js/2.60acd37f.chunk.js",
+    "static/css/main.6210e76c.chunk.css",
+    "static/js/main.1baab7e9.chunk.js"
+  ]
+}
