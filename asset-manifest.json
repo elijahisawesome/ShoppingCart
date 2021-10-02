@@ -1,21 +1,31 @@
 {
   "files": {
     "main.css": "/ShoppingCart/static/css/main.6210e76c.chunk.css",
-    "main.js": "/ShoppingCart/static/js/main.1baab7e9.chunk.js",
-    "main.js.map": "/ShoppingCart/static/js/main.1baab7e9.chunk.js.map",
+    "main.js": "/ShoppingCart/static/js/main.7ed314ea.chunk.js",
+    "main.js.map": "/ShoppingCart/static/js/main.7ed314ea.chunk.js.map",
     "runtime-main.js": "/ShoppingCart/static/js/runtime-main.dcd2172a.js",
     "runtime-main.js.map": "/ShoppingCart/static/js/runtime-main.dcd2172a.js.map",
-    "static/js/2.60acd37f.chunk.js": "/ShoppingCart/static/js/2.60acd37f.chunk.js",
-    "static/js/2.60acd37f.chunk.js.map": "/ShoppingCart/static/js/2.60acd37f.chunk.js.map",
+    "static/js/2.789776bc.chunk.js": "/ShoppingCart/static/js/2.789776bc.chunk.js",
+    "static/js/2.789776bc.chunk.js.map": "/ShoppingCart/static/js/2.789776bc.chunk.js.map",
     "index.html": "/ShoppingCart/index.html",
     "static/css/main.6210e76c.chunk.css.map": "/ShoppingCart/static/css/main.6210e76c.chunk.css.map",
-    "static/js/2.60acd37f.chunk.js.LICENSE.txt": "/ShoppingCart/static/js/2.60acd37f.chunk.js.LICENSE.txt",
-    "static/media/Cheeseburger.81fdb64b.jpg": "/ShoppingCart/static/media/Cheeseburger.81fdb64b.jpg"
+    "static/js/2.789776bc.chunk.js.LICENSE.txt": "/ShoppingCart/static/js/2.789776bc.chunk.js.LICENSE.txt",
+    "static/media/Cheeseburger.81fdb64b.jpg": "/ShoppingCart/static/media/Cheeseburger.81fdb64b.jpg",
+    "static/media/Peach-Free-Download-PNG.fb201355.png": "/ShoppingCart/static/media/Peach-Free-Download-PNG.fb201355.png",
+    "static/media/apple.976e5d7c.png": "/ShoppingCart/static/media/apple.976e5d7c.png",
+    "static/media/banana.ec067ade.jpg": "/ShoppingCart/static/media/banana.ec067ade.jpg",
+    "static/media/canned-tomato.06b6f246.png": "/ShoppingCart/static/media/canned-tomato.06b6f246.png",
+    "static/media/fish1.894e30ef.webp": "/ShoppingCart/static/media/fish1.894e30ef.webp",
+    "static/media/game.97556473.webp": "/ShoppingCart/static/media/game.97556473.webp",
+    "static/media/new-york-strip.473eb849.jpg": "/ShoppingCart/static/media/new-york-strip.473eb849.jpg",
+    "static/media/supermarket.cbd0ec37.jpg": "/ShoppingCart/static/media/supermarket.cbd0ec37.jpg",
+    "static/media/train.202a466f.jpg": "/ShoppingCart/static/media/train.202a466f.jpg",
+    "static/media/watergun.be9b722f.jpeg": "/ShoppingCart/static/media/watergun.be9b722f.jpeg"
   },
   "entrypoints": [
     "static/js/runtime-main.dcd2172a.js",
-    "static/js/2.60acd37f.chunk.js",
+    "static/js/2.789776bc.chunk.js",
     "static/css/main.6210e76c.chunk.css",
-    "static/js/main.1baab7e9.chunk.js"
+    "static/js/main.7ed314ea.chunk.js"
   ]
 }
