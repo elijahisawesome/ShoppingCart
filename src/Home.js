@@ -1,7 +1,9 @@
 export default function Home(){
     return(
         <div>
-            Home Page!
+            <h1 style={{textAlign:'center'}}>
+                Welcome to Grocery Store!
+            </h1>
         </div>
     )
 }

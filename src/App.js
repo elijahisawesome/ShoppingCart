@@ -13,7 +13,13 @@ function App() {
   const [productsInCart, setProductsInCart] = useState({});
   const [totalProducts, setTotalProducts] = useState(0);
   const [subPage, setSubPage] = useState('');
+  const [splashImage, setSplashImage] = useState(true);
 
+
+
+  const updateSplashImage = function(val){
+    setSplashImage(val);
+  }
   const updatePage = function(val){
     setSubPage(val);
   }
@@ -55,18 +61,18 @@ function App() {
   return (
     <Router>
       <Nav totalProducts={totalProducts}/>
-      <Products addOrRemoveProduct={addOrRemoveProduct} page={subPage}/>
+      <Products addOrRemoveProduct={addOrRemoveProduct} page={subPage} splashImageStatus={splashImage} updateSplashImage={updateSplashImage}/>
       <Switch> 
-        <Route exact path = '/' component={Home}></Route>
-        <Route exact path ='/Contact'><Contact/></Route>
+        <Route exact path = '/'> <Home updateSplashImage={updateSplashImage}/></Route>
+        <Route exact path ='/Contact'><Contact updateSplashImage={updateSplashImage}/></Route>
         {Object.entries(pagesProducts).map((category, index)=>{
           return(
             <Route exact path={`/Products/${category[0]}`} key={index}>
-              <PageGenerator isSubMenu={false} sideBar={category} title={category[0]} productArray={category[1]} addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/>
+              <PageGenerator updateSplashImage={updateSplashImage} isSubMenu={false} sideBar={category} title={category[0]} productArray={category[1]} addOrRemoveProduct={addOrRemoveProduct} setPage={updatePage}/>
             </Route>
           )
         })}
-        <CategoryRouting addOrRemoveProduct={addOrRemoveProduct} updatePage={updatePage}/>
+        <CategoryRouting updateSplashImage={updateSplashImage} addOrRemoveProduct={addOrRemoveProduct} updatePage={updatePage}/>
       </Switch>
       <Cart addOrRemoveProduct={addOrRemoveProduct} productsInCart={productsInCart} incrementProduct={incrementProduct}/>
     </Router>
@@ -80,7 +86,7 @@ const CategoryRouting = (props)=>{
       Object.entries(category[1]).map((subProduct, subIndex)=>{
         return(
           <Route exact path={`/Products/${category[0]}/${subProduct[0]}`} key={subIndex}>
-            <PageGenerator isSubMenu={true} sideBar={category} title={subProduct[0]} productArray={subProduct[1]} addOrRemoveProduct={props.addOrRemoveProduct} setPage={props.updatePage}/>
+            <PageGenerator updateSplashImage={props.updateSplashImage} isSubMenu={true} sideBar={category} title={subProduct[0]} productArray={subProduct[1]} addOrRemoveProduct={props.addOrRemoveProduct} setPage={props.updatePage}/>
           </Route>
         )
       })

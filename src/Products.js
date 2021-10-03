@@ -5,18 +5,20 @@ import {useEffect, useState} from 'react'
 import {subPagesNames} from './subPages/subPages.js';
 import SideBar from './SideBar.js';
 import splashImage from './images/supermarket.jpg';
-console.log(data);
 const products = data;
 const MAX_URL_LENGTH = 42;
 
 
 export default function ProductsPage(props){
 
+
     return(
         <div>
             <link rel="preconnect" href="https://fonts.googleapis.com"/>
             <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
             <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
+            
+            {}
             <SideBar page={props.page}/>
             <nav id='productsHeader'>
                 {subPagesNames.map((page,index)=>{
@@ -31,18 +33,23 @@ export default function ProductsPage(props){
                     </div>)
                 })}
             </nav>
-            <SplashImageGetter/>
+            <SplashImageGetter splashImageStatus={props.splashImageStatus}/>
         </div>
     )
 
 
 }
 
-function SplashImageGetter(){
+function SplashImageGetter(props){
+    if (props.splashImageStatus){
+        return(
+            <div id='SplashImageContainer'>
+                <img id='SplashImage' src={splashImage}></img>
+            </div>
+        )
+    }
     return(
-        <div id='SplashImageContainer'>
-            <img id='SplashImage' src={splashImage}></img>
-        </div>
+        <div></div>
     )
 }
 

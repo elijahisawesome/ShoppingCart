@@ -24,15 +24,22 @@
     border-radius: 20%;
     padding: 5px;
 }
-button.product{
-    background-color:transparent;
+.productButton{
+    background:transparent;
+    font-family: 'Bebas Neue';
+    border:none;
+    cursor:pointer;
 }
+.productPrice{
+    font-family: 'Bebas Neue';
+}
+
 #productsHeader{
     font-size: 50px;
     text-align:center;
     display:flex;
     justify-content:center;
-    gap:5px;
+    gap:85px;
 }
 .productBlock{
     font-size: 12px;

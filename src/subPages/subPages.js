@@ -7,6 +7,7 @@ const subPagesNames = ['Groceries','Clothes','Electronics']
 function PageGenerator(props){
     useEffect(()=>{
         props.setPage(props.sideBar);
+        props.updateSplashImage(true);
         return()=>{props.setPage('')}
     },[])
 
@@ -25,6 +26,7 @@ function PageGenerator(props){
                                 <img className ='productImage'src={`${product.img}`}/>
                             </div>
                             <button onClick={()=>props.addOrRemoveProduct(product,1)}>Add to Cart</button>
+                            <div className='productPrice'>{product.price}</div>
                             </div>
                         )
                     })}
@@ -47,7 +49,8 @@ function PageGenerator(props){
                                 <div className='productImageContainer'>
                                     <img className ='productImage'src={`${product.img}`}/>
                                 </div>
-                                <button onClick={()=>props.addOrRemoveProduct(product,1)}>Add to Cart</button>
+                                <button className='productButton' onClick={()=>props.addOrRemoveProduct(product,1)}>Add to Cart</button>
+                                <div className='productPrice'>{product.price}</div>
                                 </div>
                             )
                         })
