@@ -1,4 +1,4 @@
-import * as data from '../products/products.json';
+import * as data from '../products/products.js';
 import '../styles/subPages.css';
 import {useEffect} from 'react';
 const products = data.default;
@@ -22,7 +22,7 @@ function PageGenerator(props){
                             <div className ='product' key={index}>
                             {product.name}
                             <div className='productImageContainer'>
-                                <img className ='productImage'src={`../${product.img}`}/>
+                                <img className ='productImage'src={`${product.img}`}/>
                             </div>
                             <button onClick={()=>props.addOrRemoveProduct(product,1)}>Add to Cart</button>
                             </div>
@@ -45,7 +45,7 @@ function PageGenerator(props){
                                 <div className ='product' key={index}>
                                 {product.name}
                                 <div className='productImageContainer'>
-                                    <img className ='productImage'src={`../${product.img}`}/>
+                                    <img className ='productImage'src={`${product.img}`}/>
                                 </div>
                                 <button onClick={()=>props.addOrRemoveProduct(product,1)}>Add to Cart</button>
                                 </div>

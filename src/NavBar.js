@@ -7,14 +7,19 @@ export default function NavBar(props){
     return(
         <nav id = 'NavBar'>
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css"></link>
-            <h3 className = 'NavLogoWrapper'>
-                <img className = 'NavLogo'src={logo} alt=''/>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+            <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet"/> 
+
+            <Link to ='/' className = 'NavLogoWrapper'>
+                <div className = 'NavLogo'></div>
+            </Link>
+            
+            <h3 >
+                
             </h3>
             <Link to ='/Contact'>
                 <li className="navItem">Contact</li>
-            </Link>
-            <Link to ='/'>
-                <li className="navItem">Home</li>
             </Link>
             <button className="navItem" onClick={(e)=>{toggleShop(e)}}><i className="fa fa-shopping-cart"></i> {props.totalProducts}</button>
         </nav>

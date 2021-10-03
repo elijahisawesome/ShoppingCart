@@ -1,29 +1,34 @@
 #sideBar{
     float:left;
-    top:90px;
-    left:0%;
     width:18%;
     height:800px;
     background:rgb(225, 228, 240);
     z-index:-100;
+    font-family: 'Bebas Neue';
+    margin-top:20px;
 }
 .sideBarCategory{
     display:flex;
     flex-direction:column;
+    margin-top:20px;
     width:100%;
     justify-content:flex-end;
-    padding:0 0 15px 0;
+    padding:0 0 15px 10px;
     overflow:hidden;
     font-size: 20px;
     font-weight: 600;
 }
 .sideBarCategory:hover{
-    color:red;
+    color:rgb(60, 62, 206);
     cursor:pointer;
 }
 .sideBarProduct{
     padding-top: 5px;
     color:black;
     font-size: 15px;
-    font-weight:400;
+    font-weight:200;
+    font-family:'Arial Narrow Bold', sans-serif;
+}
+body{
+    background-color:rgb(236, 236, 245)
 }

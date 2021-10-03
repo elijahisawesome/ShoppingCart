@@ -34,9 +34,6 @@ export default function CartPage(props){
     return(
 
         <div id="Cart">
-        <link rel="preconnect" href="https://fonts.googleapis.com"/>
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
             <div className='cartBuffer'>Shopping Cart</div>
             <div className='cartItems'>
                 {productArray.map((product)=>{
@@ -78,7 +75,9 @@ export default function CartPage(props){
 
 function DefaultCartPage(){
     return(
-        <div id="Cart">Cart is empty!
+        <div id="Cart">
+            <div className='cartBuffer'>Shopping Cart</div>
+            Cart is empty!
             <div id='CartPageCover' onClick={()=>{cartToggle()}}></div>
         </div>
     )

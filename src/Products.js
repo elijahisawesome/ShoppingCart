@@ -1,10 +1,12 @@
-import * as data from './products/products.json';
+import data from './products/products.js';
 import './styles/Product.css';
 import {Link} from 'react-router-dom';
 import {useEffect, useState} from 'react'
 import {subPagesNames} from './subPages/subPages.js';
 import SideBar from './SideBar.js';
-const products = data.default;
+import splashImage from './images/supermarket.jpg';
+console.log(data);
+const products = data;
 const MAX_URL_LENGTH = 42;
 
 
@@ -12,6 +14,9 @@ export default function ProductsPage(props){
 
     return(
         <div>
+            <link rel="preconnect" href="https://fonts.googleapis.com"/>
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+            <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"/> 
             <SideBar page={props.page}/>
             <nav id='productsHeader'>
                 {subPagesNames.map((page,index)=>{
@@ -34,16 +39,9 @@ export default function ProductsPage(props){
 }
 
 function SplashImageGetter(){
-    if(window.location.href.length>MAX_URL_LENGTH){
-        return(
-            <div id='SplashImageContainer'>
-                <img id='SplashImage' src='../../images/supermarket.jpg'></img>
-            </div>
-        )
-    }
     return(
         <div id='SplashImageContainer'>
-                <img id='SplashImage' src='../images/supermarket.jpg'></img>
+            <img id='SplashImage' src={splashImage}></img>
         </div>
     )
 }

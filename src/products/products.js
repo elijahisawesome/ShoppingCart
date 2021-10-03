@@ -1,40 +1,50 @@
-{
+import smalltoy from '../images/watergun.jpeg'
+import bigtoy from "../images/train.jpg"
+import darksouls from "../images/game.webp"
+import fish from "../images/fish1.webp"
+import steak from "../images/new-york-strip.jpg"
+import peach from "../images/Peach-Free-Download-PNG.png"
+import apple from "../images/apple.png"
+import banana from "../images/banana.jpg"
+import cannedgoods from "../images/canned-tomato.png"
 
-    "Clothes":{
+export default {
+
+    Clothes:{
         "Not Clothes":[
             {
                 "id":2,
                 "name":"small toy",
                 "price":"6.00",
-                "img":"../images/watergun.jpeg"
+                "img": smalltoy
             },
             {
                 "id":3,
                 "name":"big toy",
                 "price":"24.99",
-                "img":"../images/train.jpg"
+                "img":bigtoy
             }
         ]
     }
     ,
-    "Electronics":{
+    Electronics:{
         "Video Games":[
             {
                 "id":4,
                 "name":"Dark Souls",
                 "price":"60.00",
-                "img":"../images/game.webp"
+                "img":darksouls
             }
 
         ]
     },
-    "Groceries":{
+    Groceries:{
         "Fish":[
             {
                 "id":6,
                 "name":"green fish",
                 "price":"29.50",
-                "img":"../images/fish1.webp"
+                "img":fish
             }
         ],
         "Meat":[
@@ -42,7 +52,7 @@
                 "id":7,
                 "name":"steak",
                 "price":"13.99",
-                "img":"../images/new-york-strip.jpg"
+                "img":steak
             }
         ],
         "Fruit":[
@@ -50,19 +60,19 @@
                 "id":0,
                 "name":"peach",
                 "price":"3.20",
-                "img":"../images/Peach-Free-Download-PNG.png"
+                "img":peach
             },
             {
                 "id":1,
                 "name":"apple",
                 "price":"2.62",
-                "img":"../images/apple.png"
+                "img":apple
             },
             {
                 "id":5,
                 "name":"banana",
                 "price":".68",
-                "img":"../images/banana.jpg"
+                "img":banana
             }
         ],
         "Canned Goods":[
@@ -70,7 +80,7 @@
                 "id":8,
                 "name":"canned  tomato",
                 "price": ".98",
-                "img":"../images/canned-tomato.png"
+                "img":cannedgoods
             }
         ]
     }
