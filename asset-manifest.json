@@ -1,31 +1,35 @@
 {
   "files": {
-    "main.css": "/ShoppingCart/static/css/main.6210e76c.chunk.css",
-    "main.js": "/ShoppingCart/static/js/main.7ed314ea.chunk.js",
-    "main.js.map": "/ShoppingCart/static/js/main.7ed314ea.chunk.js.map",
+    "main.css": "/ShoppingCart/static/css/main.ff7012a4.chunk.css",
+    "main.js": "/ShoppingCart/static/js/main.5bfff8f7.chunk.js",
+    "main.js.map": "/ShoppingCart/static/js/main.5bfff8f7.chunk.js.map",
     "runtime-main.js": "/ShoppingCart/static/js/runtime-main.dcd2172a.js",
     "runtime-main.js.map": "/ShoppingCart/static/js/runtime-main.dcd2172a.js.map",
-    "static/js/2.789776bc.chunk.js": "/ShoppingCart/static/js/2.789776bc.chunk.js",
-    "static/js/2.789776bc.chunk.js.map": "/ShoppingCart/static/js/2.789776bc.chunk.js.map",
+    "static/js/2.5a053807.chunk.js": "/ShoppingCart/static/js/2.5a053807.chunk.js",
+    "static/js/2.5a053807.chunk.js.map": "/ShoppingCart/static/js/2.5a053807.chunk.js.map",
     "index.html": "/ShoppingCart/index.html",
-    "static/css/main.6210e76c.chunk.css.map": "/ShoppingCart/static/css/main.6210e76c.chunk.css.map",
-    "static/js/2.789776bc.chunk.js.LICENSE.txt": "/ShoppingCart/static/js/2.789776bc.chunk.js.LICENSE.txt",
+    "static/css/main.ff7012a4.chunk.css.map": "/ShoppingCart/static/css/main.ff7012a4.chunk.css.map",
+    "static/js/2.5a053807.chunk.js.LICENSE.txt": "/ShoppingCart/static/js/2.5a053807.chunk.js.LICENSE.txt",
     "static/media/Cheeseburger.81fdb64b.jpg": "/ShoppingCart/static/media/Cheeseburger.81fdb64b.jpg",
     "static/media/Peach-Free-Download-PNG.fb201355.png": "/ShoppingCart/static/media/Peach-Free-Download-PNG.fb201355.png",
     "static/media/apple.976e5d7c.png": "/ShoppingCart/static/media/apple.976e5d7c.png",
     "static/media/banana.ec067ade.jpg": "/ShoppingCart/static/media/banana.ec067ade.jpg",
+    "static/media/bandcamp.2b4428be.svg": "/ShoppingCart/static/media/bandcamp.2b4428be.svg",
     "static/media/canned-tomato.06b6f246.png": "/ShoppingCart/static/media/canned-tomato.06b6f246.png",
     "static/media/fish1.894e30ef.webp": "/ShoppingCart/static/media/fish1.894e30ef.webp",
     "static/media/game.97556473.webp": "/ShoppingCart/static/media/game.97556473.webp",
+    "static/media/github.f68ebffb.svg": "/ShoppingCart/static/media/github.f68ebffb.svg",
+    "static/media/instagram.647f5fb4.svg": "/ShoppingCart/static/media/instagram.647f5fb4.svg",
     "static/media/new-york-strip.473eb849.jpg": "/ShoppingCart/static/media/new-york-strip.473eb849.jpg",
     "static/media/supermarket.cbd0ec37.jpg": "/ShoppingCart/static/media/supermarket.cbd0ec37.jpg",
     "static/media/train.202a466f.jpg": "/ShoppingCart/static/media/train.202a466f.jpg",
-    "static/media/watergun.be9b722f.jpeg": "/ShoppingCart/static/media/watergun.be9b722f.jpeg"
+    "static/media/watergun.be9b722f.jpeg": "/ShoppingCart/static/media/watergun.be9b722f.jpeg",
+    "static/media/youtube.0c1ac503.svg": "/ShoppingCart/static/media/youtube.0c1ac503.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.dcd2172a.js",
-    "static/js/2.789776bc.chunk.js",
-    "static/css/main.6210e76c.chunk.css",
-    "static/js/main.7ed314ea.chunk.js"
+    "static/js/2.5a053807.chunk.js",
+    "static/css/main.ff7012a4.chunk.css",
+    "static/js/main.5bfff8f7.chunk.js"
   ]
 }
